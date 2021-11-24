@@ -2,6 +2,7 @@
 
 namespace Lexik\Bundle\TranslationBundle\Command;
 
+use Lexik\Bundle\TranslationBundle\Manager\LocaleManager;
 use Lexik\Bundle\TranslationBundle\Manager\LocaleManagerInterface;
 use Lexik\Bundle\TranslationBundle\Translation\Importer\FileImporter;
 use Symfony\Component\Console\Command\Command;
@@ -33,7 +34,7 @@ class ImportTranslationsCommand extends Command
      */
     public function __construct(
         TranslatorInterface $translator,
-        LocaleManagerInterface $localeManager,
+        LocaleManager $localeManager,
         FileImporter $fileImporter
     )
     {
